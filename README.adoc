@@ -1,3 +1,6 @@
+To show use of multiResourceItem reader with a JsonItemReader. 
+ Modified spring batch sample to read .json files in the resource directory.
+
 :spring_version: current
 :spring_boot_version: 2.3.2.RELEASE
 :Component: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/stereotype/Component.html
@@ -274,3 +277,4 @@ The following guides may also be helpful:
 * https://spring.io/guides/gs/accessing-data-mysql/[Accessing data with MySQL]
 
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/main/footer.adoc[]
+

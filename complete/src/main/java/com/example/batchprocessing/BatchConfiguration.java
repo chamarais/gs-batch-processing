@@ -42,7 +42,6 @@ public class BatchConfiguration {
 
 	@Autowired
 	public StepBuilderFactory stepBuilderFactory;
-	// end::setup[]
 
 	// tag::readerwriterprocessor[]
 	@Bean
@@ -53,19 +52,9 @@ public class BatchConfiguration {
 				.name("personItemReader").build();
 	}
 
-//	@Bean
-//	public ItemReader<String> reader() {
-//
-//		MultiResourceItemReader<String> reader = new MultiResourceItemReader<>();
-//		reader.setResources(resources);
-//		reader.setDelegate(new FlatFileItemReader<>(..));
-//		return reader;
-//	}
-
 	@Bean
 	public MultiResourceItemReader<Person> multiResourceItemReader()
 	{
-
 		Resource[] resources = null;
 		ResourcePatternResolver patternResolver = new PathMatchingResourcePatternResolver();
 		try {
@@ -79,18 +68,7 @@ public class BatchConfiguration {
 		return resourceItemReader;
 	}
 
-//	@Bean
-//	public FlatFileItemReader<Person> reader() {
-//		return new FlatFileItemReaderBuilder<Person>()
-//			.name("personItemReader")
-//			.resource(new ClassPathResource("sample-data.csv"))
-//			.delimited()
-//			.names(new String[]{"firstName", "lastName"})
-//			.fieldSetMapper(new BeanWrapperFieldSetMapper<Person>() {{
-//				setTargetType(Person.class);
-//			}})
-//			.build();
-//	}
+
 
 	@Bean
 	public PersonItemProcessor processor() {
